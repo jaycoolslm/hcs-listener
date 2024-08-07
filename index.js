@@ -7,6 +7,7 @@ const client = Client.forTestnet().setOperator(process.env.ACCOUNT_ID, process.e
 
 const handleMessage = (message) => {
   const decodedMessage = Buffer.from(message.contents, "utf8").toString()
+  console.log(`Received message: ${decodedMessage}`);
 }
 
 const main = async () => {
